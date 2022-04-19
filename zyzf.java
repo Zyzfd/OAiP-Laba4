@@ -10,7 +10,14 @@ public class zyzf {
         hash_lin.add("25");
         hash_lin.add("3");
         hash_lin.add("50");
+        hash_lin.add("30");
+        hash_lin.add("6");
+        hash_lin.add("8");
+        hash_lin.add("гф");
+        hash_lin.add("я");
+        hash_lin.add("д");
         System.out.println(hash_lin.search("25"));
+        System.out.println(hash_lin.search("д"));
 
         Hash_Chain hash_ch = new Hash_Chain(10);
         hash_ch.add("5");

@@ -17,6 +17,7 @@ public class Hash_Linear {
     public void add(String value) {
         if (is_not_full() == 0) {
             System.out.println("Hash table is full");
+            return;
         }
 
         int ind = hash_func(value);
@@ -49,6 +50,7 @@ public class Hash_Linear {
                     } else {
                         ind = 0;
                     }
+                    count++;
                 }
             } else {
                 return -1;
