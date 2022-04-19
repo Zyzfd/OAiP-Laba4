@@ -1,11 +1,11 @@
 package Hash;
 
-public class Hash {
+public class Hash_Linear {
     private String[] hash_field;
     private int number_fields;
     private final int hash_const = 999991;
 
-    public Hash(int number_fields) {
+    public Hash_Linear(int number_fields) {
         hash_field = new String[number_fields];
         this.number_fields = number_fields;
 
