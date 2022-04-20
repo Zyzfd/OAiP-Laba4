@@ -38,7 +38,7 @@ public class zyzf {
             System.out.printf("%d ",arr[i]);
         }
         System.out.printf("\n");
-        arr = hash_ch.del("50");
+        arr = hash_ch.del("ф");
         for (int i = 0; i < 2; i++) {
             System.out.printf("%d ",arr[i]);
         }

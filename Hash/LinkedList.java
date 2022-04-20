@@ -39,20 +39,37 @@ public class LinkedList {
         return size++;
     }
 
-    public boolean remove(int ind){
+    public void remove(int ind){
         int count = 0;
         Node ptr = head;
+        Node main = new Node();
+
         while (count != ind) {
+            if (count == 0) {
+                main = new Node(ptr.data);
+            } else {
+                main.next = new Node(ptr.data);
+            }
             ptr = ptr.next;
             count++;
         }
-        if (ptr == null) {
-            return false;
-        }
+
+        // if (ptr == null) {
+        //     return ptr;
+        // }
+        
         ptr = ptr.next;
-        head = ptr;
+        while (ptr != null) {
+            if (count == 0) {
+                main = new Node(ptr.data);
+            } else {
+                main.next = new Node(ptr.data);
+            }
+            ptr = ptr.next;
+        }
+        head = main;
         k--;
-        return true;
+        // return ptr;
     }
 
     public String get(int ind) {
