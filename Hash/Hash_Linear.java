@@ -58,6 +58,29 @@ public class Hash_Linear {
         }
     }
 
+    public int del(String value) {
+        int ind = hash_func(value);
+
+        int count = 0;
+        while (true) {
+            if (count != number_fields) {
+                if (hash_field[ind] == value) {
+                    hash_field[ind] = null;
+                    return ind;
+                } else {
+                    if (ind < number_fields-1) {
+                        ind++;
+                    } else {
+                        ind = 0;
+                    }
+                    count++;
+                }
+            } else {
+                return -1;
+            }
+        }
+    }
+
     public int is_not_full() {
         int count = 0;
         for (int i = 0; i < hash_field.length; i++) {

@@ -1,6 +1,7 @@
 package Hash;
 
-import java.util.LinkedList;
+//import java.util.LinkedList;
+import Hash.LinkedList;
 
 public class Hash_Chain {
     private LinkedList[] hash_field;
@@ -11,7 +12,7 @@ public class Hash_Chain {
         hash_field = new LinkedList[number_fields];
         this.number_fields = number_fields;
         for (int i = 0; i < number_fields; i++) {
-            hash_field[i] = new LinkedList<String>();
+            hash_field[i] = new LinkedList();
         }
     }
 
@@ -24,7 +25,7 @@ public class Hash_Chain {
         
         int count = 0;
         while (true) {
-            if (count != hash_field[ind].size()) {
+            if (count != hash_field[ind].size()+1) {
                 if (hash_field[ind].get(count) == value) {
                     int[] arr = {ind, count};
                     return arr;
@@ -32,7 +33,27 @@ public class Hash_Chain {
                     count++;
                 }
             } else {
-                int[] arr = {-1};
+                int[] arr = {-1, -1};
+                return arr;
+            }
+        }
+    }
+
+    public int[] del(String value) {
+        int ind = hash_func(value);
+        
+        int count = 0;
+        while (true) {
+            if (count != hash_field[ind].size()+1) {
+                if (hash_field[ind].get(count) == value) {
+                    hash_field[ind].remove(count);
+                    int[] arr = {ind, count};
+                    return arr;
+                } else {
+                    count++;
+                }
+            } else {
+                int[] arr = {-1, -1};
                 return arr;
             }
         }
