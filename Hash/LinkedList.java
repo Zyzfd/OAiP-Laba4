@@ -54,9 +54,6 @@ public class LinkedList {
             count++;
         }
 
-        // if (ptr == null) {
-        //     return ptr;
-        // }
         
         ptr = ptr.next;
         while (ptr != null) {
@@ -69,7 +66,6 @@ public class LinkedList {
         }
         head = main;
         k--;
-        // return ptr;
     }
 
     public String get(int ind) {
@@ -80,6 +76,18 @@ public class LinkedList {
             count++;
         }
         return ptr.data;
+    }
+
+    public void print() {
+        Node ptr = head;
+        for (int i = 0; i <= this.size(); i++) {
+            if (i == 0) {
+                System.out.print(ptr.data);
+            } else {
+                System.out.print("->" + ptr.data);
+            }
+            ptr = ptr.next;
+        }
     }
 }
 

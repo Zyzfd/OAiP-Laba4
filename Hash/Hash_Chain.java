@@ -64,4 +64,12 @@ public class Hash_Chain {
         int temp = (int)ascii * hash_const;
         return temp % number_fields;
     }
+
+    public void print_hash() {
+        for (int i = 0; i < number_fields; i++) {
+            System.out.printf("[%d] ", i);
+            hash_field[i].print();
+            System.out.printf("\n");
+        }
+    }
 }

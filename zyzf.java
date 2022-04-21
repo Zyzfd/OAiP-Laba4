@@ -16,8 +16,11 @@ public class zyzf {
         hash_lin.add("гф");
         hash_lin.add("я");
         hash_lin.add("д");
+        hash_lin.print_hash();
         System.out.println(hash_lin.del("50"));
+        hash_lin.print_hash();
         System.out.println(hash_lin.del("д"));
+        hash_lin.print_hash();
         System.out.println(hash_lin.search("25"));
         System.out.println(hash_lin.search("р"));
 
@@ -33,22 +36,31 @@ public class zyzf {
         hash_ch.add("гф");
         hash_ch.add("я");
         hash_ch.add("д");
+        hash_ch.print_hash();
         int[] arr = hash_ch.search("25");
         for (int i = 0; i < 2; i++) {
             System.out.printf("%d ",arr[i]);
         }
         System.out.printf("\n");
+        hash_ch.print_hash();
         arr = hash_ch.del("ф");
         for (int i = 0; i < 2; i++) {
             System.out.printf("%d ",arr[i]);
         }
         System.out.printf("\n");
+        hash_ch.print_hash();
         arr = hash_ch.del("д");
         for (int i = 0; i < 2; i++) {
             System.out.printf("%d ",arr[i]);
         }
         System.out.printf("\n");
-        arr = hash_ch.search("д");
+        hash_ch.print_hash();
+        arr = hash_ch.del("я");
+        for (int i = 0; i < 2; i++) {
+            System.out.printf("%d ",arr[i]);
+        }
+        System.out.printf("\n");
+        hash_ch.print_hash();
     }
 
 }

@@ -96,4 +96,12 @@ public class Hash_Linear {
         int temp = (int)ascii * hash_const;
         return temp % number_fields;
     }
+
+    public void print_hash() {
+        for (int i = 0; i < number_fields; i++) {
+            System.out.printf("[%d] ", i);
+            System.out.print(hash_field[i]);
+            System.out.printf("\n");
+        }
+    }
 }
